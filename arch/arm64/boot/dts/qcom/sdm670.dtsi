@@ -450,14 +450,23 @@
 
 			vbmeta {
 				compatible = "android,vbmeta";
-				parts = "vbmeta,boot,system,vendor,dtbo";
+				parts = "vbmeta,boot,system,vendor,dtbo,recovery";
 			};
 
 			fstab {
 				compatible = "android,fstab";
+
 				vendor {
 					compatible = "android,vendor";
-					dev = "/dev/block/platform/soc/1d84000.ufshc/by-name/vendor";
+					dev = "/dev/block/platform/soc/7c4000.sdhci/by-name/vendor";
+					type = "ext4";
+					mnt_flags = "ro,barrier=1,discard";
+					fsmgr_flags = "wait,slotselect,avb";
+				};
+
+				system {
+					compatible = "android,system";
+					dev = "/dev/block/platform/soc/7c4000.sdhci/by-name/system";
 					type = "ext4";
 					mnt_flags = "ro,barrier=1,discard";
 					fsmgr_flags = "wait,slotselect,avb";

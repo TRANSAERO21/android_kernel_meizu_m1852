@@ -131,6 +131,8 @@
 		#include "fg-gen3-batterydata-itech-3000mah.dtsi"
 		#include "fg-gen3-batterydata-ascent-3450mah.dtsi"
 		#include "fg-gen3-batterydata-demo-6000mah.dtsi"
+		#include "batterydata-3488744-huaqin-ql1898-atl-3210mah.dtsi"
+		#include "batterydata-3449614-huaqin-ql1898-3210mah.dtsi"
 	};
 };
 
